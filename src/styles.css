@@ -220,3 +220,320 @@ input {
     padding: 24px;
   }
 }
+
+/* ---------------- 补料复核台 ---------------- */
+
+select {
+  width: 100%;
+  min-height: 42px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  padding: 0 12px;
+  background: #ffffff;
+  font: inherit;
+  color: #172033;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.hint {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.notice {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 7px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.notice.warn {
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+  color: #9a3412;
+}
+
+.notice.ok {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  color: #166534;
+}
+
+.notice.bad {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+}
+
+/* 在途单据卡片 */
+.records .ticket {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.ticket h3 {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ticket p {
+  margin: 0;
+  color: #526071;
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.st-pending {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fdba74;
+}
+
+.st-holding {
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #a5b4fc;
+}
+
+.st-remeasure {
+  background: #fefce8;
+  color: #a16207;
+  border: 1px solid #fde047;
+}
+
+.st-passed {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+.st-advised {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.st-archived {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.flags {
+  margin: 0;
+  padding: 10px 12px 10px 28px;
+  border-radius: 7px;
+  background: #fff7ed;
+  border: 1px dashed #fdba74;
+  color: #9a3412;
+  font-size: 13px;
+}
+
+.flags li + li {
+  margin-top: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.actions select,
+.actions input {
+  width: auto;
+  min-width: 160px;
+  flex: 1 1 180px;
+}
+
+.actions button {
+  padding: 0 16px;
+  white-space: nowrap;
+}
+
+/* 复测 / 改用量表单 */
+.remeasure {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.remeasure.revise {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background: #fbfdff;
+}
+
+.remeasure .hint {
+  grid-column: 1 / -1;
+}
+
+.remeasure button {
+  grid-column: 1 / -1;
+}
+
+.remeasure label span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.remeasure input {
+  width: 100%;
+  min-height: 42px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  padding: 0 12px;
+}
+
+.advice {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  font-size: 13px;
+  color: #7f1d1d;
+}
+
+.advice ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.advice li + li {
+  margin-top: 6px;
+}
+
+.advice .actions {
+  margin-top: 10px;
+}
+
+.advice input {
+  min-height: 38px;
+  border-radius: 7px;
+  border: 1px solid #fca5a5;
+  padding: 0 12px;
+  font: inherit;
+}
+
+.events {
+  font-size: 13px;
+  color: #526071;
+}
+
+.events summary {
+  cursor: pointer;
+  user-select: none;
+}
+
+.events ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/* 台账表格 */
+.ledger {
+  overflow-x: auto;
+}
+
+.ledger table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.ledger th,
+.ledger td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.ledger th {
+  color: #64748b;
+  font-weight: 600;
+  background: #f8fafc;
+}
+
+.ledger td.reason {
+  white-space: normal;
+  min-width: 220px;
+  color: #526071;
+}
+
+.ledger tr.archived td {
+  color: #94a3b8;
+  background: #fafafa;
+}
+
+.axes {
+  display: inline-flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.axis {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.axis.ok {
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.axis.bad {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.rules {
+  margin: 0;
+  padding-left: 22px;
+  line-height: 2;
+  color: #334155;
+}
+
+@media (max-width: 860px) {
+  .remeasure,
+  .remeasure.revise {
+    grid-template-columns: 1fr;
+  }
+}
